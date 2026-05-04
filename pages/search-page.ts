@@ -17,3 +17,15 @@ export class SearchPage {
   get resultsRows(): Locator {
     return this.resultsTable.locator('tr').filter({ hasText: /\S/ });
   }
+
+    async searchBy(type: SearchType, value: string) {
+    await this.getInput(type).fill(value);
+
+    await this.page.locator('#btnSzukaj').click();
+
+  }
+
+  async captureMessage(): Promise<string> {
+    await this.messageLocator.waitFor();
+    return await this.messageLocator.innerText();
+  }
