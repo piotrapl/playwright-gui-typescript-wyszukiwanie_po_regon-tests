@@ -29,3 +29,16 @@ export class SearchPage {
     await this.messageLocator.waitFor();
     return await this.messageLocator.innerText();
   }
+
+    private getInput(type: SearchType): Locator {
+    if (type === 'regon') {
+      return this.page.locator('#txtRegon');
+    }
+
+    if (type === 'nip') {
+      return this.page.getByLabel('NIP', { exact: true });
+    }
+
+    return this.page.locator('#txtKrs');
+  }
+}
