@@ -1,8 +1,8 @@
 import { test as base } from '@playwright/test';
-
-import { SearchPage } from '../pages/search.page';
+import { SearchPage } from '../pages/search-page';
 import { NegativeFlow } from '../flows/negative.flow';
 import { PositiveFlow } from '../flows/positive.flow';
+import { allure } from 'allure-playwright';
 
 type Fixtures = {
   negativeFlow: NegativeFlow;
