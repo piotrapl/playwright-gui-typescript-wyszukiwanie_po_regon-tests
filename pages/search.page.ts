@@ -23,23 +23,23 @@ export class SearchPage {
     await this.page.getByLabel('NIP', { exact: true }).waitFor();
   }
 
-  async searchBy(type: SearchType, value: string): Promise<ApiResponse> {
+  async searchBy(type: SearchType, value: string) { //}: Promise<ApiResponse> {
     await this.getInput(type).fill(value);
 
-    const responsePromise = this.page.waitForResponse(
-      response =>
-        response.url().includes('daneSzukaj') &&
-        response.request().method() === 'POST'
-    );
+    //const responsePromise = this.page.waitForResponse(
+      //response =>
+        //response.url().includes('daneSzukaj') &&
+        //response.request().method() === 'POST'
+    //);
 
     await this.page.locator('#btnSzukaj').click();
 
-    const response = await responsePromise;
-    const body = await response.json();
+    //const response = await responsePromise;
+    //const body = await response.json();
 
     return {
-      status: response.status(),
-      body
+      //status: response.status(),
+     //body
     };
   }
 

@@ -24,9 +24,4 @@ test.afterEach(async ({ page }, testInfo) => {
     contentType: 'image/png'
   });
 
-  await allure.attachment(
-    'screenshot',
-    screenshot,
-    'image/png'
-  );
   });
