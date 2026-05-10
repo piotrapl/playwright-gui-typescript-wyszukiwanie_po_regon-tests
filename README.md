@@ -1,4 +1,4 @@
-# Playwright + TypeScript UI Tests — REGON Search
+# Playwright + TypeScript UI Tests — searching a business entity by REGON/NIP/KRS number
 
 ## Krótki opis projektu (PL)
 
