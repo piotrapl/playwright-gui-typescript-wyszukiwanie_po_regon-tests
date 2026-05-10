@@ -35,7 +35,7 @@ export default defineConfig({
   ['line'],
   ['html', {
     outputFolder: 'playwright-report',
-    open: process.env.CI ? 'never' : 'always'
+    open: 'never'
   }]
 ],
   /* Ustawienia współdzielone między wszystkimi projektami. 
