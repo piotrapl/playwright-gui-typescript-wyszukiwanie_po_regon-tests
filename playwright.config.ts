@@ -73,10 +73,10 @@ export default defineConfig({
     }, */
 
     /* Testuj z użyciem urządzeń mobilnych  */
-    {
-       name: 'Mobile Chrome',
-       use: { ...devices['Pixel 5'] },
-    },
+    //{
+     //  name: 'Mobile Chrome',
+     //  use: { ...devices['Pixel 5'] },
+   // },
    //{
     //   name: 'Mobile Safari',
     //   use: { ...devices['iPhone 12'] },
