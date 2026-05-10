@@ -1,71 +1,51 @@
-## Testy automatyczne funcjonalnośc wyszukiwania podmiotów – Playwright (TypeScript)
+# Playwright + TypeScript UI Tests — REGON Search
 
-[![CI](https://github.com/piotrapl/playwright-typescript-wyszukiwanie-podmiotow-gui-tests/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/piotrapl/playwright-typescript-wyszukiwanie-podmiotow-gui-tests/actions/workflows/playwright.yml)
+## Krótki opis projektu (PL)
 
-## Opis projektu
-Projekt to zestaw **testów automatycznych UI** napisanych w **Playwright + TypeScript**
+Projekt prezentuje automatyczne testy UI wykonane w frameworku Playwright z użyciem TypeScript.  
+Testy weryfikują wyszukiwanie podmiotów gospodarczych w publicznej wyszukiwarce REGON.  
 
-Testy weryfikują funkcjonalność wyszukiwania firm po numerze **REGON** na oficjalnej stronie rządowej:
-https://wyszukiwarkaregon.stat.gov.pl
+Zakres projektu obejmuje:
+- przypadki pozytywne i negatywne,
+- testowanie formularzy wyszukiwania,
+- walidację komunikatów UI,
+- Page Object Model (POM),
+- dane testowe oddzielone od logiki testów,
+- nowoczesny stack QA Automation: Playwright + TypeScript.
 
----
-
-## Testowana funkcjonalność
-- Wyszukiwanie firmy po numerze **REGON**
-- Walidacja błędnych numerów REGON
-- Wyświetlanie danych firmy dla poprawnych REGONów
-
----
-
-## Scenariusze testowe
-### Przypadki negatywne
-- REGON o nieprawidłowej długości
-- REGON z błędną cyfrą kontrolną
-- REGON zawierający znaki nienumeryczne
-
-### Przypadki pozytywne
-- Poprawny REGON 9-cyfrowy → firma znaleziona
-- Poprawny REGON 14-cyfrowy → firma znaleziona
+Projekt został przygotowany jako portfolio QA Automation Engineer.
 
 ---
 
-## Technologie i narzędzia
-- **Playwright**
-- **TypeScript**
-- **Playwright Test Runner**
-- **Raport HTML**
-- **GitHub Actions (gotowe pod CI)**
+# Playwright TypeScript Entities UI Tests
+
+UI automated tests for the Polish REGON business entity search engine built with:
+
+- Playwright
+- TypeScript
+- Page Object Model (POM)
+
+The project focuses on validating business entity searches using REGON numbers through the web interface.
 
 ---
 
-## Zastosowane dobre praktyki automatyzacji
--  Własne **fixtures Playwright**
--  Testy data-driven
--  Asercje odporne na zmiany treści UI
--  Zrzuty ekranu dla **każdego testu** niezależnie od jego wyniku (PASS lub FAIL)
--  Screenshoty dołączone do raportu HTML
--  Czytelna i łatwa w utrzymaniu struktura testów
+## Tested Application
+
+Public REGON search engine:
+
+[REGON Search Engine](https://wyszukiwarkaregon.stat.gov.pl/appBIR/index.aspx?utm_source=chatgpt.com)
 
 ---
 
-## Uruchamianie testów lokalnie
-```bash
-npm install
-npx playwright test
-npx playwright show-report
-```
+# Main Features
 
-## Możliwe usprawnienia, optymalizacje:
+- UI end-to-end testing with Playwright
+- TypeScript-based test architecture
+- Positive and negative test scenarios
+- Page Object Model implementation
+- Reusable flows and assertions
+- Data-driven tests
+- HTML reporting
+- GitHub Actions CI ready
 
-- Udoskonalenie selektorów przy użyciu **test ID** (jeśli dostępne)
-- Oznaczanie lub izolacja **niestabilnych testów**
-- Lepsze logowanie i obsługa błędów testowych
-- Kategoryzacja testów przy użyciu **tagów Playwright**
-
-## Co można dodać do tego projektu, w jaki sposób go rozszerzyć ?
-
-- **Analizę wyników testów** i dashboardy
-- **Testy wieloprzeglądarkowe** (Chromium, Firefox, WebKit)
-- **Testy w widokach mobilnych**
-- Zewnętrzne źródła danych testowych (JSON / CSV)
-- Podejście hybrydowe: testy UI + API
+---
