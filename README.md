@@ -49,3 +49,100 @@ Public REGON search engine:
 - GitHub Actions CI ready
 
 ---
+# Architecture Overview
+
+The project uses layered architecture:
+
+### Layer	Responsibility
+Tests  -  Define business scenarios
+Flows  -  Execute reusable business actions
+Assertions  -  Validate expected behavior
+Pages  -  UI interaction logic
+Data  -  Test datasets
+Fixtures  -  Dependency injection
+
+# Example Scenario
+
+### Negative REGON search flow:
+
+Open REGON website
+Enter invalid REGON number
+Click search button
+Verify UI error message:
+Nie znaleziono podmiotu
+
+## Technologies
+Technology	Purpose
+Playwright	UI automation
+TypeScript	Strong typing
+Node.js	Runtime
+HTML Reporter	Test reporting
+GitHub Actions	CI/CD
+
+## Installation
+Clone repository
+git clone https://github.com/piotrapl/playwright-typescript-entities-ui-tests.git
+Install dependencies
+npm install
+Install Playwright browsers
+npx playwright install
+
+## How to run Tests
+- Run all tests
+npx playwright test
+- Run negative tests
+npx playwright test tests/negative
+
+- Run specific file
+npx playwright test tests/negative/regon.negative.spec.ts
+HTML Report
+
+## Generate and open Playwright HTML report:
+
+npx playwright show-report
+
+## Example Code
+### Example Test
+test(`REGON negative search`, async ({ negativeFlow }) => {
+  const result = await negativeFlow.searchInvalid(
+    'regon',
+    '123456789'
+  );
+
+  await result.assert();
+});
+
+## Key Playwright Concepts Used
+
+### Page Object Model (POM)
+UI locators and actions are separated from test logic.
+
+### Fixtures as Dependency Injection
+Reusable objects are injected into tests.
+
+### Async/Await Synchronization
+Modern asynchronous handling with Playwright.
+
+### Data-Driven Testing
+Multiple datasets executed in loops.
+
+### Locator API
+Reliable and readable UI element handling.
+
+### CI/CD
+The project is prepared for GitHub Actions pipelines.
+
+## Typical CI steps:
+
+-  checkout repository,
+-  install dependencies,
+-  install browsers,
+-  run tests,
+-  generate HTML reports.
+
+## This repository demonstrates:
+
+-  scalable Playwright architecture,
+-  modern TypeScript practices,
+-  maintainable automated UI testing,
+-  separation of concerns in test automation.
