@@ -43,3 +43,5 @@ test.afterEach(async ({ page }, testInfo) => {
 //    zdefiniowane w Fixtures.
 // dzięki temu w testach możemy używać "negativeFlow" jako argumentu, 
 //    będzie on dostępny dzięki tej definicji.
+
+// test.afterEach( - to jest tzw. hook, który jest wykonywany po każdym teście.
