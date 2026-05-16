@@ -5,6 +5,8 @@ import { NegativeFlow } from '../flows/negative.flow';
 /*
   Fixtures to nie jest słowo kluczowe, 
   ale jest to konwencja w Playwright do organizowania kodu testowego.
+  Musimy użyć nazwy "Fixtures", a nie np. "MyFixtures" - Playwright oczekuje tej nazwy, 
+  by poprawnie zidentyfikować i użyć tych danych w testach.
  */ 
 type Fixtures = {
   negativeFlow: NegativeFlow;
