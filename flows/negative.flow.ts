@@ -25,3 +25,7 @@ export class NegativeFlow {
     );
   }
 }
+
+/*
+   searchInvalid - metoda wykonują negatywny scenariusz testowy. Przyjmuje trzy argumenty:
+*/
