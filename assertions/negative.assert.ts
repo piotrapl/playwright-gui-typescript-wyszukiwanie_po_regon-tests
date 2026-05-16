@@ -10,7 +10,6 @@ import { expect, Locator } from '@playwright/test';
 */
 export class NegativeAssert {
   constructor(
-    //private apiResponse: ApiResponse,
     private messageLocator: Locator,
     private expectedRegex: RegExp
   ) {}
