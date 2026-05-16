@@ -1,6 +1,11 @@
 import { SearchPage, SearchType } from '../pages/search.page';
 import { NegativeAssert } from '../assertions/negative.assert';
 
+/*
+   dzięki temu, że jest osobna klasa NegativeFlow, łatwo jest zarządzać logiką testów negatywnych
+   w jednym miejscu.
+   bez niej logika testów negatywnych byłaby rozproszona po różnych testach.
+*/
 export class NegativeFlow {
   constructor(private searchPage: SearchPage) {}
 
