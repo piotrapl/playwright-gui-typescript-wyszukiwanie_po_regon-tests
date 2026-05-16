@@ -2,6 +2,10 @@ import { test as base } from '@playwright/test';
 import { SearchPage } from '../pages/search.page';
 import { NegativeFlow } from '../flows/negative.flow';
 
+/*
+  Fixtures to nie jest słowo kluczowe, 
+  ale jest to konwencja w Playwright do organizowania kodu testowego.
+ */ 
 type Fixtures = {
   negativeFlow: NegativeFlow;
 };
