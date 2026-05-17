@@ -3,7 +3,7 @@ import { invalidNips } from '../../data/invalid-nips';
 
 for (const dataset of invalidNips) {
 
-    test(`NIP negative search: ${dataset.nip}`, async ({ negativeFlow }) => {
+    test(`Test negatywny wyszukiwania po NIP: ${dataset.nip}`, async ({ negativeFlow }) => {
         const result = await negativeFlow.searchInvalid(
           'nip',
           dataset.nip,
