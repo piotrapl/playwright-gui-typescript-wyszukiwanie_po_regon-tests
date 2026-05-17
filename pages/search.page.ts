@@ -58,6 +58,12 @@ export class SearchPage {
   }
 }
 
+// async open(): Promise<void> - metoda otwierająca stronę wyszukiwania. 
+//    używa metody goto do przejścia na określony URL (pobrany z ENV.baseURL) 
+//    i czeka, aż element input dla NIP będzie dostępny.
+// Promise<void> - oznacza, że ta metoda jest asynchroniczna i nie zwraca żadnej wartości (void), 
+//    ale zwraca obietnicę (Promise), która zostanie rozwiązana gdy strona zostanie otwarta
+
 // get messageLocator(): Locator - getter - zwraca locator dla elementu, który wyświetla komunikaty (np. błędy)
 
 // get resultsTable(): Locator - getter - zwraca locator dla tabeli wyników wyszukiwania.
