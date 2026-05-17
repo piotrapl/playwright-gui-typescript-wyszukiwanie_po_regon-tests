@@ -28,4 +28,9 @@ export class NegativeFlow {
 
 /*
    searchInvalid - metoda wykonują negatywny scenariusz testowy. Przyjmuje trzy argumenty:
-*/
+    type - typ wyszukiwania (np. po nazwie, po ID itp.)
+    value - wartość, której szukamy (np. nieistniejąca nazwa, nieprawidłowe ID itp.)
+    expectedRegex - wyrażenie regularne, które powinno pasować do komunikatu błędu zwracanego przez aplikację.
+      searchInvalid wykonuje wyszukiwanie za pomocą searchBy i zwraca instancję NegativeAssert,
+      (będzie używana do asercji w testach negatywnych.)
+   */
