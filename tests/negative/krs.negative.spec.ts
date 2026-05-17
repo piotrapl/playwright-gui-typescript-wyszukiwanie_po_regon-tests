@@ -3,7 +3,7 @@ import { invalidKrsNumbers } from '../../data/invalid-krs-numbers';
 
 for (const dataset of invalidKrsNumbers) {
 
-    test(`KRS negative search: ${dataset.krs}`, async ({ negativeFlow }) => {
+    test(`Test negatywny wyszukiwania po KRS: ${dataset.krs}`, async ({ negativeFlow }) => {
         const result = await negativeFlow.searchInvalid(
           'krs',
           dataset.krs,
