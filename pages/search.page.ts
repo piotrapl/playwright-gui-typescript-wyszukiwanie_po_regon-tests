@@ -58,4 +58,11 @@ export class SearchPage {
   }
 }
 
+// get messageLocator(): Locator - getter - zwraca locator dla elementu, który wyświetla komunikaty (np. błędy)
+
+// get resultsTable(): Locator - getter - zwraca locator dla tabeli wyników wyszukiwania.
+
+//get resultsRows(): Locator - getter - zwraca locator dla wierszy 
+//     wyników wyszukiwania.
+
 // getInput - metoda pomocnicza, zwraca odpowiedni element input w zależności od typu wyszukiwania.
