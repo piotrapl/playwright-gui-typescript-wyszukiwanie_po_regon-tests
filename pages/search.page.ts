@@ -57,3 +57,5 @@ export class SearchPage {
     return this.page.locator('#txtKrs');
   }
 }
+
+// getInput - metoda pomocnicza, zwraca odpowiedni element input w zależności od typu wyszukiwania.
