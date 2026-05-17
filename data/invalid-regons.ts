@@ -14,5 +14,10 @@ export const invalidRegons = [
       title: 'Podany REGON 9-znakowy: nieprawidłowy - błędna cyfra kontrolna)',
       regon: '123456789',
       expectedRegex: /nieprawidłowy|nieprawidłowa|błędny|błędna/i
+    },
+    {
+      title: 'Podany REGON 9-znakowy jest nieprawidłowy - zawiera minimum 1 znak inny niż cyfra',
+      regon: '1234567AB',
+      expectedRegex: /nieprawidłowy|nieprawidłowa|błędny|błędna/i
     }
 ]
