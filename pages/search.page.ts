@@ -1,6 +1,8 @@
 import { Locator, Page } from '@playwright/test';
 import { ENV } from '../utils/env';
-
+// typ wyszukiwania, który może być używany w metodzie searchBy.
+// w jęz. TypeScript możemy definiować własne typy, 
+// co pozwala nam na lepszą kontrolę nad tym, jakie wartości mogą być przekazywane do funkcji.
 export type SearchType = 'regon' | 'nip' | 'krs';
 
 export class SearchPage {
