@@ -46,10 +46,10 @@ jobs:
            retention-days: 14
 
       # 7 Optional: upload raw test results (traces, screenshots, videos)
-      # - name: Upload test results
-        # if: always()
-        # uses: actions/upload-artifact@v4
-        # with:
-        #   name: playwright-test-results
-        #   path: test-results
-        #   retention-days: 14
+      - name: Upload test results
+         if: always()
+         uses: actions/upload-artifact@v4
+         with:
+           name: playwright-test-results
+           path: test-results
+           retention-days: 14
