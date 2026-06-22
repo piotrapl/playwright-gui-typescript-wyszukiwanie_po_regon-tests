@@ -24,7 +24,7 @@ jobs:
           node-version: 20
           cache: npm
 
-      # 3 Install dependencies
+      # 3 Install dependencies - instalacja zależności
       - name: Install npm dependencies
         run: npm ci
 
